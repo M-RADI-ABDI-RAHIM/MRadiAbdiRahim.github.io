@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kalkulator</title>
+<link rel="stylesheet" href="bootstrap.css">
+</head>
+<body>
+
+<h2 class="text-bg-secondary">Kalkulator</h2>
+
+<input class="bg-primary-subtle" type="text" id="num1" placeholder="Masukkan angka pertama">
+<input class="bg-secondary-subtle" type="text" id="num2" placeholder="Masukkan angka kedua">
+
+<button class="btn btn-danger" onclick="tambah()">Tambah(+)</button>
+<button class="btn btn-secondary" onclick="kurang()">Kurang(-)</button>
+<button class="btn btn-info" onclick="kali()">Kali(*)</button>
+<button class="btn btn-success" onclick="bagi()">Bagi(/)</button>
+
+<p class="btn btn-primary">Hasil: <span id="result"></span></p>
+
+<script>
+function tambah() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').innerHTML = num1 + num2;
+}
+
+function kurang() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').innerHTML = num1 - num2;
+}
+
+function kali() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').innerHTML = num1 * num2;
+}
+
+function bagi() {
+  var num1 = parseInt(document.getElementById('num1').value);
+  var num2 = parseInt(document.getElementById('num2').value);
+  document.getElementById('result').innerHTML = num1 / num2;
+}
+</script>
+
+</body>
+</html>
